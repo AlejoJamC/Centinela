@@ -1,3 +1,6 @@
+# PHPStorm config
+.idea/
+
 vendor/
 node_modules/
 
