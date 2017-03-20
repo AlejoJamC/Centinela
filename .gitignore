@@ -1,18 +1,19 @@
-# PHPStorm config
+# Webstorm config
 .idea/
 
-vendor/
-node_modules/
+# Logs
+*.log
+npm-debug.log*
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
 
-# Laravel 5 & Lumen specific
-bootstrap/cache/
-.env.*.php
-.env.php
-.env
+# Dependency directories
+node_modules
 
-# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
+# Optional npm cache directory
+.npm
+
+# OS Globals
+thumbs.db
+.DS_Store
