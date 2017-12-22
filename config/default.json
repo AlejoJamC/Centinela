@@ -70,5 +70,6 @@
       "secure": false
     }
   },
-  "mysql": "mysql://root:@localhost:3306/centinela"
+  "mysql": "mysql://root:@localhost:3306/centinela",
+  "mongodb": "mongodb://localhost:27017/centinela"
 }
