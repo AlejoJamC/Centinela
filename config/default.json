@@ -5,5 +5,70 @@
   "paginate": {
     "default": 10,
     "max": 50
-  }
+  },
+  "authentication": {
+    "secret": "342f5e848185d45c54a4cc25f448cb3ab40312a28365413234784b3071dff975b7135af177a48673de485f8e5bc74e29195332ee4cddfb09ca392d18757dbfbe32662b5db1f5698821f86c6f861bed1099cd811d465e64a43c53d78fbe8db3cd25cea84432424d6c2741f195acaa7bb74fef75078fc881ffabb63b73c5796504f4c944cbdcac3bcb8fb1cfe87faf0a2c2089bd70aa567304ab8766dfbcc373f2ebdbf61151acf91effda7a068c4b5c2cf3d79af577adb29d1a444582410fc2cdba1e653acd9b7aa691253149bb4a71c407d418b62673ea5b1f92482e8c7b14e6e5988ec88c1b10ecdae99a21a08e050ac08bed5a0b98af3a8bfa957f4c153e8a",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "successRedirect": "/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
+    },
+    "github": {
+      "clientID": "your github client id",
+      "clientSecret": "your github client secret",
+      "successRedirect": "/"
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  },
+  "mysql": "mysql://root:@localhost:3306/centinela"
 }
